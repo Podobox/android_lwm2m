@@ -60,7 +60,6 @@ dependencies {
         exclude(group = "com.github.peteroupc", module = "datautilities")
     }
     implementation("org.eclipse.leshan:leshan-lwm2m-client:2.0.0-M17") {
-        exclude(group = "org.eclipse.leshan", module = "leshan-client-core")
         exclude(group = "com.github.peteroupc", module = "datautilities")
     }
 
