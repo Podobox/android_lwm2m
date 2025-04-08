@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="10.12.4">
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/identity/DefaultCoapIdentityHandler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/identity/IdentityHandlerProvider.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/identity/IdentityHandler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/identity/TlsTransportContextKeys.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/identity/DefaultTlsIdentityHandler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/resource/LwM2mCoapResource.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/SingleX509KeyManager.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/request/RandomTokenGenerator.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/request/ResponseCodeUtil.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/State.java">
+</file>
+</checkstyle>

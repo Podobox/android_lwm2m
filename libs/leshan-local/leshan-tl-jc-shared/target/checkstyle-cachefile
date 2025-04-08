@@ -1,0 +1,13 @@
+#Wed Mar 19 16:10:38 CET 2025
+configuration*?=7680C5C6F0A10952F5151957DC4DA9FF93A7C914
+/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/request/RandomTokenGenerator.java=1742391064655
+/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/identity/DefaultCoapIdentityHandler.java=1742391064655
+/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/SingleX509KeyManager.java=1742391064655
+/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/request/ResponseCodeUtil.java=1742391064655
+/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/State.java=1742391064655
+/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/identity/IdentityHandlerProvider.java=1742391064655
+/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/identity/IdentityHandler.java=1742391064655
+module-resource*?\:file\:/home/jeremie/Documents/leshan/./eclipse/java.header=3778069B476CD1B3DD7D99772A8E61087FF18E00
+/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/identity/TlsTransportContextKeys.java=1742391064655
+/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/identity/DefaultTlsIdentityHandler.java=1742391064655
+/home/jeremie/Documents/leshan/leshan-tl-jc-shared/src/main/java/org/eclipse/leshan/transport/javacoap/resource/LwM2mCoapResource.java=1742391064655

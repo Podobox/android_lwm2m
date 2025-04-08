@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="10.12.4">
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/Startable.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/tlv/TlvEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/tlv/Tlv.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/tlv/TlvDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/tlv/TlvException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/observation/SingleObservation.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/observation/CompositeObservation.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/observation/ObservationIdentifier.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/observation/Observation.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/json/jackson/LwM2mJsonJacksonEncoderDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/json/jackson/JsonRootObjectSerDes.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/json/jackson/JsonArrayEntrySerDes.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/json/LwM2mJsonException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/json/LwM2mJsonEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/json/JsonRootObject.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/json/LwM2mJsonDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/json/JsonArrayEntry.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/InvalidLwM2mPathException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/ObjectLink.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/TimestampedLwM2mNodes.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/tlv/LwM2mNodeTlvEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/tlv/LwM2mNodeTlvDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/NodeEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/CodecException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/TimestampedMultiNodeEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/json/LwM2mNodeJsonDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/json/LwM2mNodeJsonEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/text/LwM2mNodeTextDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/text/LwM2mNodeTextEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/DefaultLwM2mDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/LwM2mValueConverter.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/MultiNodeEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/MultiNodeDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/TimestampedNodeEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/NodeDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/LwM2mEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/TimestampedMultiNodeDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/cbor/LwM2mNodeCborDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/cbor/LwM2mNodeCborEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/LwM2mValueChecker.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/DefaultLwM2mEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/PathDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/opaque/LwM2mNodeOpaqueDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/opaque/LwM2mNodeOpaqueEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/PathEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/TimestampedNodeDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/senml/LwM2mNodeSenMLDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/senml/LwM2mSenMLResolver.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/senml/LwM2mPathSenMLDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/senml/LwM2mResolvedSenMLRecord.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/senml/LwM2mNodeSenMLEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/senml/LwM2mPathSenMLEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/codec/LwM2mDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mPath.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mObjectInstance.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mNode.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mIncompletePath.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mPathParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mNodeVisitor.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mNodeLevel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mSingleResource.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mMultipleResource.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mNodeException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mRoot.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mChildNode.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mResourceInstance.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/PrefixedLwM2mPathParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/TimestampedLwM2mNode.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mNodeUtil.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mResource.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/PrefixedLwM2mPath.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/node/LwM2mObject.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/LwM2m.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/LwM2mId.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/ObjectModelValidator.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/DefaultDDFFileValidatorFactory.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/LwM2mModelRepository.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/LwM2mModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/ObjectModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/DDFFileValidatorFactory.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/ResourceModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/StaticModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/LwM2mCoreObjectVersionRegistry.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/ObjectLoader.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/InvalidDDFFileException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/DDFFileParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/URN.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/DDFFileValidator.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/InvalidModelException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/DefaultDDFFileValidator.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/model/DefaultObjectModelValidator.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/MatchingType.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/credentials/CredentialsReader.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/LinkParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/DefaultLinkParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/LinkParseException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/LwM2mLinkParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/AssignationLevel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/LongAttributeModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/LwM2mAttribute.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/BigDecimalAttributeModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/StringAttributeModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/Attachment.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/LwM2mAttributeModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/LwM2mAttributeParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/InvalidAttributesException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/ObjectVersionAttributeModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/PositiveBigDecimalAttributeModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/MixedLwM2mAttributeSet.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/AccessMode.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/DoubleAttributeModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/DefaultLwM2mAttributeParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/PositiveDoubleAttributeModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/AttributeParserUtil.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/NotificationAttributeTree.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/LwM2mAttributes.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/PositiveLongAttributeModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/LwM2mAttributeSet.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/LwM2mVersionAttributeModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/attributes/AttributeClass.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/LwM2mLink.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/DefaultLwM2mLinkParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/lwm2m/MixedLwM2mLink.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/DefaultLinkSerializer.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/attributes/AttributeParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/attributes/UnquotedStringAttribute.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/attributes/DefaultAttributeParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/attributes/ValuelessAttribute.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/attributes/QuotedStringAttribute.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/attributes/Attributes.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/attributes/ContentFormatAttribute.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/attributes/BaseAttribute.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/attributes/AttributeSet.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/attributes/ResourceTypeAttribute.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/attributes/InvalidAttributeException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/attributes/AttributeModel.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/attributes/Attribute.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/Link.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/link/LinkSerializer.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/oscore/HkdfAlgorithm.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/oscore/OscoreSetting.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/oscore/InvalidOscoreSettingException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/oscore/AeadAlgorithm.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/oscore/OscoreValidator.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/peer/LwM2mPeer.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/peer/X509Identity.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/peer/IpPeer.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/peer/LwM2mIdentity.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/peer/PskIdentity.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/peer/RpkIdentity.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/peer/OscoreIdentity.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/peer/SocketIdentity.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/Stoppable.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/DeregisterResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/ReadResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/SendableResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/RegisterResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/LwM2mResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/WriteResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/ExecuteResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/BootstrapDiscoverResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/BootstrapResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/ResponseCallback.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/ObserveCompositeResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/BootstrapDeleteResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/CreateResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/ErrorCallback.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/AbstractLwM2mResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/UpdateResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/BootstrapFinishResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/WriteAttributesResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/DeleteResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/DiscoverResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/ReadCompositeResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/ObserveResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/CancelObservationResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/SendResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/BootstrapReadResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/CancelCompositeObservationResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/WriteCompositeResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/response/BootstrapWriteResponse.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/CertificateUsage.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/AbstractSimpleDownlinkRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/UplinkRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/RegisterRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/BootstrapDeleteRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/BootstrapReadRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/CancelCompositeObservationRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/ObserveCompositeRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/WriteCompositeRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/UplinkDeviceManagementRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/BootstrapWriteRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/UplinkRequestVisitor.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/BootstrapFinishRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/WriteRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/exception/InvalidRequestException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/exception/SendFailedException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/exception/RequestRejectedException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/exception/TimeoutException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/exception/InvalidResponseException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/exception/RequestCanceledException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/exception/UnconnectedPeerException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/exception/ClientSleepingException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/DownlinkDeviceManagementRequestVisitor.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/UplinkDeviceManagementRequestVisitor.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/argument/Argument.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/argument/InvalidArgumentException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/argument/Arguments.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/BootstrapDiscoverRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/DownlinkBootstrapRequestVisitor.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/ReadCompositeRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/ExecuteRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/DownlinkDeviceManagementRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/CompositeDownlinkRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/LwM2mRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/DownlinkBootstrapRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/DownlinkRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/ContentFormat.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/BootstrapRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/BindingMode.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/ReadRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/DiscoverRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/DownlinkRequestVisitor.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/AbstractLwM2mRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/SimpleDownlinkRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/DeleteRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/UplinkBootstrapRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/UplinkBootstrapRequestVisitor.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/DeregisterRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/WriteAttributesRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/CancelObservationRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/ObserveRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/UpdateRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/DownLinkRequestVisitorAdapter.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/SendRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/request/CreateRequest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/util/NamedThreadFactory.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/util/base64/Base64Decoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/util/base64/Base64Encoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/util/base64/DefaultBase64Encoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/util/base64/InvalidBase64Exception.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/util/base64/DefaultBase64Decoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/util/json/JacksonJsonSerDes.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/util/json/JsonException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/util/datatype/NumberUtil.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/util/datatype/LwM2mValueUtil.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/util/TimestampUtil.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/ResponseCode.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/parser/StringParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/SecurityMode.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/endpoint/DefaultEndPointUriHandler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/endpoint/DefaultEndPointUriParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/endpoint/EndPointUriHandler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/endpoint/LwM2mEndpoint.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/endpoint/Protocol.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/endpoint/EndPointUriParser.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/endpoint/EndpointUri.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/endpoint/InvalidEndpointUriException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/security/jsse/LwM2mX509TrustManager.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/security/util/SecurityUtil.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/security/certificate/verifier/TrustAnchorAssertionCertificateVerifier.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/security/certificate/verifier/CaConstraintCertificateVerifier.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/security/certificate/verifier/ServiceCertificateConstraintCertificateVerifier.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/security/certificate/verifier/BaseCertificateVerifier.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/security/certificate/verifier/DomainIssuerCertificateVerifier.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/security/certificate/verifier/X509CertificateVerifier.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/security/certificate/verifier/DefaultCertificateVerifier.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/security/certificate/util/CertPathUtil.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/security/certificate/util/PKIValidator.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/security/certificate/util/X509CertUtil.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/core/Destroyable.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/senml/json/jackson/SenMLJsonRecordSerDes.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/senml/json/jackson/SenMLJsonJacksonEncoderDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/senml/SenMLDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/senml/SenMLException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/senml/SenMLRecord.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/senml/ResolvedSenMLRecord.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/senml/SenMLResolver.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/senml/cbor/upokecenter/SenMLCborUpokecenterEncoderDecoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/senml/cbor/upokecenter/SenMLCborPackSerDes.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/senml/SenMLEncoder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/main/java/org/eclipse/leshan/senml/SenMLPack.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/tlv/TlvDecoderTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/tlv/TlvTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/tlv/TlvEncoderTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/observation/CompositeObservationTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/observation/ObservationIdentifierTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/observation/SingleObservationTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/json/JsonDeserializerTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/json/JsonSerializerTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/json/JsonRootObjectTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/json/JsonArrayEntryTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/LwM2mObjectTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/LwM2MResourceTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/ObjectLinkTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/TimestampedLwM2mNodeTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/codec/LwM2mNodeDecoderEncoderTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/codec/LwM2mNodeEncoderTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/codec/LwM2mNodeDecoderTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/LwM2mResourceInstanceTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/LwM2mSingleResourceTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/LwM2mPathTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/LwM2mNodeUtilTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/LwM2mMultipleResourceTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/LwM2mObjectInstanceTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/TimestampedLwM2mNodesTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/LwM2mRootTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/node/PrefixedLwM2mPathTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/datatype/NumberUtilTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/model/ValidateModelsTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/model/LwM2mModelRespositotyTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/model/LwM2mModelRepositoryTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/model/DDFFileParserTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/link/LinkTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/link/lwm2m/DefaultLwM2mLinkParserTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/link/lwm2m/attributes/LwM2mAttributesTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/link/lwm2m/attributes/LwM2mAttributeTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/link/lwm2m/attributes/DefaultLwM2mAttributeParserTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/link/DefaultLinkSerializerTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/link/attributes/AttributeSetTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/link/attributes/BaseAttributeTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/link/attributes/ValuelessAttributeTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/link/attributes/AttributeTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/link/MixedLwM2mLinkTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/link/LinkParserValidationTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/link/DefaultLinkParserTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/oscore/OscoreSettingTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/oscore/AeadAlgorithmTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/peer/IpPeerTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/peer/SocketIdentityTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/peer/RpkIdentityTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/peer/OscoreIdentityTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/peer/X509IdentityTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/peer/PskIdentityTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/response/ReadCompositeResponseTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/response/ObserveResponseTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/response/CancelCompositeObservationResponseTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/response/ObserveCompositeResponseTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/BootstrapRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/CancelObservationRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/RegisterRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/ContentFormatTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/BootstrapReadRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/ExecuteRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/argument/ArgumentaSerializingTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/argument/ArgumentsTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/argument/ArgumentsParsingTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/argument/ArgumentValidationTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/argument/ArgumentTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/ReadCompositeRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/ObserveCompositeRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/ObserveRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/DeregisterRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/SendRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/CreateRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/AbstractSimpleDownlinkRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/WriteAttributesRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/WriteRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/UpdateRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/request/ReadRequestTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/ResponseCodeTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/util/base64/DefaultBase64EncoderTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/util/base64/DefaultBase64DecoderTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/util/datatype/ULongTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/util/TestLwM2mId.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/util/TestToolBox.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/util/TestObjectLoader.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/util/ContentFormatArgumentConverter.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/util/TimestampUtilTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/LwM2mTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/endpoint/DefaultEndPointUriParserTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/endpoint/ProtocolTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/endpoint/EndpointUriTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/security/util/X509CertUtilTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/senml/cbor/AbstractSenMLTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/senml/cbor/SenMLCborSerializerTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/senml/cbor/SenMLTestUtil.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/core/senml/cbor/SenMLJsonSerDesTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/senml/SenMLRecordTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-core/src/test/java/org/eclipse/leshan/senml/SenMLPackTest.java">
+</file>
+</checkstyle>

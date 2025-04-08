@@ -1,0 +1,11 @@
+org/eclipse/leshan/transport/javacoap/SingleX509KeyManager.class
+org/eclipse/leshan/transport/javacoap/request/ResponseCodeUtil.class
+org/eclipse/leshan/transport/javacoap/identity/IdentityHandlerProvider.class
+org/eclipse/leshan/transport/javacoap/identity/TlsTransportContextKeys.class
+org/eclipse/leshan/transport/javacoap/identity/DefaultCoapIdentityHandler.class
+org/eclipse/leshan/transport/javacoap/resource/LwM2mCoapResource$1.class
+org/eclipse/leshan/transport/javacoap/identity/IdentityHandler.class
+org/eclipse/leshan/transport/javacoap/resource/LwM2mCoapResource.class
+org/eclipse/leshan/transport/javacoap/request/RandomTokenGenerator.class
+org/eclipse/leshan/transport/javacoap/identity/DefaultTlsIdentityHandler.class
+org/eclipse/leshan/transport/javacoap/State.class

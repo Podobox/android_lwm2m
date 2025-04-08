@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1742397038915
+Build-Jdk-Spec: 17
+Bundle-Description: Shared classes used for transport based on java-coap
+Bundle-ManifestVersion: 2
+Bundle-Name: Leshan transport javacoap shared
+Bundle-SymbolicName: leshan-tl-jc-shared
+Bundle-Version: 2.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin 5.1.9
+Export-Package: org.eclipse.leshan.transport.javacoap;uses:="javax.net.s
+ sl";version="2.0.0",org.eclipse.leshan.transport.javacoap.identity;uses
+ :="com.mbed.coap.packet,com.mbed.coap.transport,org.eclipse.leshan.core
+ .peer";version="2.0.0",org.eclipse.leshan.transport.javacoap.request;us
+ es:="com.mbed.coap.packet,org.eclipse.leshan.core";version="2.0.0",org.
+ eclipse.leshan.transport.javacoap.resource;uses:="com.mbed.coap.packet,
+ com.mbed.coap.utils,org.eclipse.leshan.core,org.eclipse.leshan.core.pee
+ r,org.eclipse.leshan.core.request,org.eclipse.leshan.transport.javacoap
+ .identity";version="2.0.0"
+Import-Package: com.mbed.coap.packet,com.mbed.coap.transport,com.mbed.co
+ ap.utils,javax.net.ssl,javax.security.auth.x500,org.eclipse.leshan.core
+ ;version="[2.0,3)",org.eclipse.leshan.core.peer;version="[2.0,3)",org.e
+ clipse.leshan.core.request;version="[2.0,3)",org.eclipse.leshan.core.re
+ quest.exception;version="[2.0,3)",org.eclipse.leshan.core.security.cert
+ ificate.util;version="[2.0,3)",org.eclipse.leshan.core.util;version="[2
+ .0,3)",org.eclipse.leshan.transport.javacoap.identity,org.eclipse.lesha
+ n.transport.javacoap.request,org.slf4j;version="[2.0,3)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-6.3.1.202206071316

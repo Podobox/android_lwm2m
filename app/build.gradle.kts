@@ -42,6 +42,8 @@ android {
     // Exclure les fichiers en conflit lors de l'assemblage de l'APK
     packaging {
         resources {
+            excludes += "META-INF/INDEX.LIST"
+            excludes += "META-INF/io.netty.versions.properties"
             excludes += "META-INF/legal/LICENSE"
             excludes += "META-INF/legal/NOTICE.md"
             excludes += "META-INF/legal/3rd-party/cc0-legalcode.html"
@@ -56,12 +58,15 @@ android {
 dependencies {
 
     implementation(libs.californium.core)
-    implementation(libs.leshan.tl.jc.client.coap) {
-        exclude(group = "com.github.peteroupc", module = "datautilities")
-    }
-    implementation("org.eclipse.leshan:leshan-lwm2m-client:2.0.0-M17") {
-        exclude(group = "com.github.peteroupc", module = "datautilities")
-    }
+//    implementation(libs.leshan.tl.jc.client.coap) {
+//        exclude(group = "com.github.peteroupc", module = "datautilities")
+//    }
+//    implementation("org.eclipse.leshan:leshan-lwm2m-client:2.0.0-M17") {
+//        exclude(group = "com.github.peteroupc", module = "datautilities")
+//    }
+    implementation(project(":leshan-tl-jc-client-coap"))
+    implementation(project(":leshan-lwm2m-client"))
+    implementation(project(":leshan-lwm2m-core"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

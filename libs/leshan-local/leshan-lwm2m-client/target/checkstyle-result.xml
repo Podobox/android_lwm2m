@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="10.12.4">
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/servers/LwM2mServer.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/servers/DmServerInfo.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/servers/ServerInfo.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/servers/ServersInfo.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/servers/ServersInfoExtractor.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/EndpointsManager.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/RegistrationUpdate.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/send/DataSender.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/send/DataSenderManager.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/send/SendService.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/send/ManualDataSender.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/send/NoDataException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/listener/ResourceListener.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/listener/ObjectListener.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/listener/ObjectsListener.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/listener/ObjectsListenerAdapter.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/SimpleInstanceEnabler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/LwM2mObjectEnabler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/DummyInstanceEnabler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/NotificationSender.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/BaseInstanceEnabler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/TransactionalObjectListener.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/BaseInstanceEnablerFactory.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/NotifySender.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/ObjectEnabler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/LwM2mRootEnabler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/RootEnabler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/LwM2mInstanceEnabler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/BaseObjectEnabler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/LwM2mObjectTree.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/LwM2mInstanceEnablerFactory.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/resource/ObjectsInitializer.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/engine/DefaultRegistrationEngine.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/engine/DefaultClientEndpointNameProvider.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/engine/ClientEndpointNameProvider.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/engine/RegistrationEngine.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/engine/RegistrationEngineFactory.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/engine/DefaultRegistrationEngineFactory.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/LeshanClientBuilder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/notification/DefaultNotificationStrategy.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/notification/NotificationManager.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/notification/NotificationDataStore.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/notification/checker/UnsignedIntegerChecker.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/notification/checker/CriteriaBasedOnValueChecker.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/notification/checker/FloatChecker.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/notification/checker/IntegerChecker.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/notification/NotificationStrategy.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/RegistrationUpdateHandler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/request/UplinkRequestSender.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/request/DefaultUplinkRequestSender.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/request/DownlinkRequestReceiver.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/request/DefaultDownlinkReceiver.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/LwM2mClient.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/observer/LwM2mClientObserver.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/observer/LwM2mClientObserverDispatcher.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/observer/LwM2mClientObserverAdapter.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/util/LinkFormatHelper.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/object/Security.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/object/Server.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/object/Oscore.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/object/Device.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/object/LwM2mTestObject.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/LeshanClient.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/bootstrap/InvalidStateException.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/bootstrap/BootstrapHandler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/bootstrap/BaseBootstrapConsistencyChecker.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/bootstrap/BootstrapListener.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/bootstrap/BootstrapConsistencyChecker.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/bootstrap/DefaultBootstrapConsistencyChecker.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/endpoint/DefaultEndpointsManager.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/endpoint/DefaultCompositeClientEndpointsProvider.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/endpoint/CompositeClientEndpointsProvider.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/endpoint/LwM2mClientEndpointsProvider.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/endpoint/ClientEndpointToolbox.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/endpoint/LwM2mClientEndpoint.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/main/java/org/eclipse/leshan/client/security/CertificateVerifierFactory.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/test/java/org/eclipse/leshan/client/servers/LwM2mServerTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/test/java/org/eclipse/leshan/client/send/ManualDataSenderTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/test/java/org/eclipse/leshan/client/util/ObjectEnablerTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/test/java/org/eclipse/leshan/client/util/LinkFormatHelperTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/test/java/org/eclipse/leshan/client/util/BaseInstanceEnablerFactoryTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-lwm2m-client/src/test/java/org/eclipse/leshan/client/util/ObjectsInitializerTest.java">
+</file>
+</checkstyle>

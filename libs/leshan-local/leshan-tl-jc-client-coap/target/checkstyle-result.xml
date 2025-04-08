@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="10.12.4">
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/resource/RootResource.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/resource/ServerIdentityExtractor.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/resource/LwM2mClientCoapResource.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/resource/BootstrapResource.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/resource/ObjectResource.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/observe/ObserversStore.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/observe/HashMapObserversStore.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/observe/ObserversListener.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/observe/NotificationHandler.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/observe/ObserversManager.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/observe/LwM2mKeys.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/request/LwM2mResponseBuilder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/request/CoapRequestBuilder.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/request/ClientCoapMessageTranslator.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/endpoint/JavaCoapClientEndpoint.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/endpoint/AbstractJavaCoapClientEndpointsProvider.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/endpoint/JavaCoapClientEndpointsProvider.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/test/java/org/eclipse/leshan/transport/javacoap/client/resource/RouterServiceTest.java">
+</file>
+<file name="/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/test/java/org/eclipse/leshan/transport/javacoap/client/observe/HashMapObserversStoreTest.java">
+</file>
+</checkstyle>

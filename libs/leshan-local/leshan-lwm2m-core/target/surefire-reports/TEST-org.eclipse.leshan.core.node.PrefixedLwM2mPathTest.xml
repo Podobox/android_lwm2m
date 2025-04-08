@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.307" tests="667" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/jeremie/Documents/leshan/leshan-lwm2m-core/target/test-classes:/home/jeremie/Documents/leshan/leshan-lwm2m-core/target/classes:/home/jeremie/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/home/jeremie/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/home/jeremie/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/home/jeremie/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/home/jeremie/.m2/repository/com/upokecenter/cbor/4.5.6/cbor-4.5.6.jar:/home/jeremie/.m2/repository/com/github/peteroupc/numbers/1.8.2/numbers-1.8.2.jar:/home/jeremie/.m2/repository/com/github/peteroupc/datautilities/1.1.0/datautilities-1.1.0.jar:/home/jeremie/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/home/jeremie/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/jeremie/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/jeremie/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/jeremie/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/jeremie/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/home/jeremie/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/home/jeremie/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/home/jeremie/.m2/repository/nl/jqno/equalsverifier/equalsverifier/3.15.3/equalsverifier-3.15.3.jar:/home/jeremie/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/jeremie/.m2/repository/net/bytebuddy/byte-buddy/1.14.9/byte-buddy-1.14.9.jar:/home/jeremie/.m2/repository/ch/qos/logback/logback-classic/1.3.15/logback-classic-1.3.15.jar:/home/jeremie/.m2/repository/ch/qos/logback/logback-core/1.3.15/logback-core-1.3.15.jar:"/>
+    <property name="java.vm.vendor" value="Debian"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://tracker.debian.org/openjdk-17"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/jeremie/Documents/leshan/leshan-lwm2m-core/target/surefire/surefirebooter-20250319160859417_3.jar /home/jeremie/Documents/leshan/leshan-lwm2m-core/target/surefire 2025-03-19T16-08-58_036-jvmRun1 surefire-20250319160859417_1tmp surefire_0-20250319160859417_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/jeremie/Documents/leshan/leshan-lwm2m-core/target/test-classes:/home/jeremie/Documents/leshan/leshan-lwm2m-core/target/classes:/home/jeremie/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/home/jeremie/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/home/jeremie/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/home/jeremie/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/home/jeremie/.m2/repository/com/upokecenter/cbor/4.5.6/cbor-4.5.6.jar:/home/jeremie/.m2/repository/com/github/peteroupc/numbers/1.8.2/numbers-1.8.2.jar:/home/jeremie/.m2/repository/com/github/peteroupc/datautilities/1.1.0/datautilities-1.1.0.jar:/home/jeremie/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/home/jeremie/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/home/jeremie/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/jeremie/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/home/jeremie/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/jeremie/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/home/jeremie/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/home/jeremie/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/home/jeremie/.m2/repository/nl/jqno/equalsverifier/equalsverifier/3.15.3/equalsverifier-3.15.3.jar:/home/jeremie/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/jeremie/.m2/repository/net/bytebuddy/byte-buddy/1.14.9/byte-buddy-1.14.9.jar:/home/jeremie/.m2/repository/ch/qos/logback/logback-classic/1.3.15/logback-classic-1.3.15.jar:/home/jeremie/.m2/repository/ch/qos/logback/logback-core/1.3.15/logback-core-1.3.15.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/jeremie"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/jeremie/Documents/leshan/leshan-lwm2m-core"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="logback.configurationFile" value="logback-leshan-test.xml"/>
+    <property name="surefire.real.class.path" value="/home/jeremie/Documents/leshan/leshan-lwm2m-core/target/surefire/surefirebooter-20250319160859417_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.14+7-Debian-1deb11u1"/>
+    <property name="user.name" value="jeremie"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.10.0-34-amd64"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/jeremie/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.debian.org/openjdk-17"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.14"/>
+    <property name="user.dir" value="/home/jeremie/Documents/leshan/leshan-lwm2m-core"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Debian"/>
+    <property name="java.vm.version" value="17.0.14+7-Debian-1deb11u1"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="assertFirstSmaller(String, String)[1]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[2]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[3]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[4]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[5]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[6]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[7]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[8]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[9]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[10]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[11]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[12]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[13]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[14]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[15]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[16]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[17]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[18]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[19]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[20]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[21]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[22]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[23]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[24]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[25]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[26]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[27]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[28]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[29]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[30]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[31]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[32]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[33]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[34]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[35]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[36]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[37]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[38]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[39]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[40]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[41]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[42]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[43]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[44]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[45]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[46]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[47]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[48]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[49]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[50]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[51]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[52]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[53]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[54]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[55]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[56]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[57]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[58]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[59]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[60]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[61]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[62]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[63]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[64]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[65]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[66]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[67]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[68]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[69]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[70]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[71]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[72]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[73]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[74]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[75]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[76]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[77]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[78]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[79]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[80]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[81]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[82]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[83]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[84]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[85]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[86]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[87]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[88]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[89]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[90]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[91]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[92]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[93]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[94]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[95]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[96]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[97]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[98]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[99]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[100]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[101]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[102]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[103]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[104]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[105]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[106]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[107]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[108]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[109]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[110]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[111]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[112]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[113]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[114]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[115]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[116]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[117]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[118]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[119]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[120]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[121]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[122]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[123]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[124]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[125]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[126]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[127]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[128]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[129]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[130]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[131]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[132]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[133]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[134]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[135]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[136]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[137]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[138]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[139]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[140]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[141]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[142]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[143]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[144]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[145]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[146]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[147]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[148]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[149]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[150]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[151]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[152]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[153]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[154]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[155]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[156]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[157]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[158]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[159]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[160]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[161]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[162]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[163]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[164]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[165]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[166]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[167]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[168]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[169]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[170]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[171]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[172]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[173]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[174]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[175]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[176]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[177]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[178]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[179]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[180]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[181]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[182]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[183]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[184]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[185]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[186]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[187]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[188]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[189]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[190]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[191]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[192]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[193]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[194]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[195]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[196]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[197]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[198]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[199]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[200]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[201]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[202]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[203]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[204]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[205]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[206]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[207]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[208]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[209]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[210]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[211]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[212]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[213]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[214]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[215]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[216]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[217]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[218]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[219]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[220]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[221]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[222]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[223]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[224]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[225]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[226]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[227]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[228]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[229]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[230]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[231]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[232]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[233]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[234]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[235]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[236]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[237]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[238]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[239]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[240]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[241]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[242]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[243]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[244]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[245]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[246]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[247]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[248]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[249]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[250]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[251]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[252]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[253]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[254]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[255]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[256]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[257]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[258]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[259]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[260]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[261]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[262]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[263]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[264]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[265]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[266]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[267]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[268]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[269]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[270]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[271]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[272]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[273]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[274]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[275]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[276]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[277]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[278]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[279]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[280]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[281]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[282]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[283]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[284]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[285]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[286]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[287]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[288]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[289]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[290]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[291]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[292]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[293]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[294]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[295]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[296]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[297]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[298]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[299]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[300]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[301]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[302]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[303]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[304]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[305]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[306]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[307]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[308]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[309]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[310]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[311]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[312]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[313]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[314]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[315]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[316]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[317]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[318]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[319]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[320]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[321]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[322]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[323]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[324]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[325]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[326]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[327]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[328]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[329]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[330]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[331]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[332]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[333]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[334]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[335]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[336]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[337]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[338]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[339]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[340]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[341]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[342]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[343]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[344]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[345]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[346]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[347]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[348]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[349]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[350]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[351]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[352]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[353]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[354]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[355]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[356]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[357]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[358]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[359]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[360]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[361]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[362]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[363]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[364]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[365]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[366]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[367]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[368]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[369]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[370]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[371]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[372]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[373]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[374]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[375]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[376]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[377]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[378]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[379]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[380]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[381]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[382]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[383]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[384]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[385]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[386]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[387]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[388]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[389]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[390]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[391]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[392]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[393]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[394]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[395]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[396]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[397]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[398]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[399]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[400]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[401]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[402]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[403]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[404]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[405]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[406]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[407]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[408]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[409]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[410]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[411]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[412]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[413]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[414]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[415]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[416]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[417]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[418]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[419]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[420]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[421]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[422]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[423]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[424]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[425]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[426]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[427]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[428]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[429]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[430]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[431]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[432]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[433]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[434]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[435]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[436]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[437]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[438]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[439]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[440]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[441]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[442]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[443]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[444]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[445]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[446]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[447]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[448]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[449]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[450]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[451]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[452]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[453]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[454]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[455]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[456]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[457]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[458]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[459]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[460]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[461]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[462]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[463]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[464]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[465]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[466]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[467]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[468]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[469]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[470]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[471]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[472]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[473]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[474]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[475]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[476]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[477]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[478]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[479]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[480]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[481]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[482]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[483]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[484]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[485]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[486]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[487]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[488]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[489]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[490]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[491]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[492]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[493]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[494]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[495]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[496]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[497]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[498]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[499]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[500]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[501]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[502]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[503]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[504]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[505]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[506]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[507]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[508]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[509]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[510]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[511]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[512]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[513]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[514]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[515]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[516]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[517]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[518]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[519]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[520]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[521]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[522]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[523]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[524]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[525]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[526]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[527]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[528]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[529]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[530]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[531]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[532]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[533]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[534]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[535]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[536]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[537]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[538]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[539]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[540]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[541]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[542]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[543]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[544]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[545]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[546]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[547]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[548]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[549]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[550]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[551]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[552]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[553]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[554]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[555]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[556]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[557]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[558]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[559]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[560]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[561]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[562]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[563]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[564]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[565]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[566]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[567]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[568]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[569]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[570]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[571]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[572]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[573]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[574]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[575]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[576]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[577]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[578]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[579]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[580]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[581]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[582]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[583]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[584]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[585]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[586]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[587]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[588]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[589]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[590]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[591]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[592]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[593]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[594]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[595]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[596]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[597]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[598]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[599]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[600]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[601]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[602]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[603]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[604]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[605]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[606]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[607]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[608]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[609]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[610]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[611]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[612]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[613]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[614]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[615]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[616]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[617]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[618]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[619]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[620]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[621]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[622]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[623]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[624]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[625]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="assertFirstSmaller(String, String)[626]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[627]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[628]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[629]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertFirstSmaller(String, String)[630]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="test_equals(String)[1]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[2]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="test_equals(String)[3]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[4]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[5]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[6]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[7]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[8]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[9]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[10]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[11]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="test_equals(String)[12]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[13]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[14]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[15]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[16]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[17]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[18]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[19]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[20]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="test_equals(String)[21]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[22]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[23]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[24]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[25]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="test_equals(String)[26]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[27]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[28]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[29]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[30]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.001"/>
+  <testcase name="test_equals(String)[31]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[32]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[33]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[34]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[35]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="test_equals(String)[36]" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.0"/>
+  <testcase name="assertEqualsHashcode" classname="org.eclipse.leshan.core.node.PrefixedLwM2mPathTest" time="0.009"/>
+</testsuite>

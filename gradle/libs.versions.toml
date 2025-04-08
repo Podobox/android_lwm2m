@@ -1,6 +1,10 @@
 [versions]
 agp = "8.8.0"
 californiumCore = "4.0.0-M3"
+cbor = "5.0.0-alpha2"
+coapCore = "6.26.0"
+jacksonCore = "2.18.3"
+junitJupiterApi = "5.13.0-M2"
 kotlin = "2.0.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -8,15 +12,23 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 leshanClientCf = "2.0.0-M15"
 leshanClientCore = "2.0.0-M15"
+leshanCoreCf = "2.0.0-M15"
 leshanTlJcClientCoap = "2.0.0-M17"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.1"
 composeBom = "2024.04.01"
 appcompat = "1.7.0"
+lwm2m = "1.2.3"
+slf4jReload4j = "2.0.17"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 californium-core = { module = "org.eclipse.californium:californium-core", version.ref = "californiumCore" }
+cbor = { module = "com.upokecenter:cbor", version.ref = "cbor" }
+coap-core = { module = "io.github.open-coap:coap-core", version.ref = "coapCore" }
+coap-mbedtls = { module = "io.github.open-coap:coap-mbedtls", version.ref = "coapCore" }
+jackson-core = { module = "com.fasterxml.jackson.core:jackson-core", version.ref = "jacksonCore" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jacksonCore" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -30,10 +42,14 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junitJupiterApi" }
 leshan-client-cf = { module = "org.eclipse.leshan:leshan-client-cf", version.ref = "leshanClientCf" }
 leshan-client-core = { module = "org.eclipse.leshan:leshan-client-core", version.ref = "leshanClientCore" }
+leshan-core-cf = { module = "org.eclipse.leshan:leshan-core-cf", version.ref = "leshanCoreCf" }
 leshan-tl-jc-client-coap = { module = "org.eclipse.leshan:leshan-tl-jc-client-coap", version.ref = "leshanTlJcClientCoap" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+lwm2m = { module = "com.arm.mbed.cloud:lwm2m", version.ref = "lwm2m" }
+slf4j-reload4j = { module = "org.slf4j:slf4j-reload4j", version.ref = "slf4jReload4j" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

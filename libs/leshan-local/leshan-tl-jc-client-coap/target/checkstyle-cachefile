@@ -1,0 +1,22 @@
+#Wed Mar 19 16:10:41 CET 2025
+configuration*?=F4986D70C678B5E4FFC25FBDB82036D83644FDB5
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/resource/ObjectResource.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/test/java/org/eclipse/leshan/transport/javacoap/client/observe/HashMapObserversStoreTest.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/resource/BootstrapResource.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/endpoint/AbstractJavaCoapClientEndpointsProvider.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/endpoint/JavaCoapClientEndpointsProvider.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/request/CoapRequestBuilder.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/endpoint/JavaCoapClientEndpoint.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/test/java/org/eclipse/leshan/transport/javacoap/client/resource/RouterServiceTest.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/observe/ObserversStore.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/resource/RootResource.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/observe/HashMapObserversStore.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/observe/LwM2mKeys.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/observe/ObserversListener.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/resource/ServerIdentityExtractor.java=1742391064651
+module-resource*?\:file\:/home/jeremie/Documents/leshan/./eclipse/java.header=3778069B476CD1B3DD7D99772A8E61087FF18E00
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/request/ClientCoapMessageTranslator.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/observe/ObserversManager.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/resource/LwM2mClientCoapResource.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/request/LwM2mResponseBuilder.java=1742391064651
+/home/jeremie/Documents/leshan/leshan-tl-jc-client-coap/src/main/java/org/eclipse/leshan/transport/javacoap/client/observe/NotificationHandler.java=1742391064651
