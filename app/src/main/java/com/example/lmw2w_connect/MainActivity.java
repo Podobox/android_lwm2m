@@ -49,15 +49,13 @@ public class MainActivity extends AppCompatActivity {
         BindingMode serverBindingMode = BindingMode.fromProtocol(Objects.requireNonNull(Protocol.fromUri("coap://leshan.eclipseprojects.io:5683")));
 
         // Load model
-        InputStream test = ObjectLoader.class.getResourceAsStream("/models/object_1.xml");
-        if (test == null) {
+        InputStream model = getAssets().open("lwm2m_model.xml");
+        if (model == null) {
             Log.e("DEBUG", "Fichier non trouvé !");
         } else {
             Log.d("DEBUG", "Fichier bien chargé !");
         }
-        String[] modelPaths = new String[] {"object_1.xml"};
-        // Normalement initialisé avec ObjectLoader.loadDefault()
-        List<ObjectModel> models = new ArrayList<>(ObjectLoader.loadDdfResources("models", modelPaths));
+        List<ObjectModel> models = new ArrayList<>(ObjectLoader.loadDdfFile(model, "lwm2m_model.xml"));
 
 
         // Initialisation des objets LwM2M

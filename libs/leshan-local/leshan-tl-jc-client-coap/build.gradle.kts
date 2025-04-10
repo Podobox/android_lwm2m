@@ -8,6 +8,7 @@ java {
 }
 
 dependencies {
+    implementation(libs.junit.jupiter)
     implementation(project(":leshan-lwm2m-client"))
     implementation(project(":leshan-tl-jc-shared"))
     implementation(project(":leshan-lwm2m-core"))

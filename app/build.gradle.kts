@@ -51,6 +51,9 @@ android {
             excludes += "META-INF/legal/3rd-party/APACHE-LICENSE-2.0.txt"
             excludes += "META-INF/legal/3rd-party/MIT-license.html"
             excludes += "META-INF/legal/3rd-party/CDDL+GPL-1.1.txt"
+            excludes += "META-INF/LICENSE.md"
+            excludes += "META-INF/LICENSE-notice.md"
+            excludes += ""
         }
     }
 }

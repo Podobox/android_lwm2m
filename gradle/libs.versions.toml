@@ -4,6 +4,7 @@ californiumCore = "4.0.0-M3"
 cbor = "5.0.0-alpha2"
 coapCore = "6.26.0"
 jacksonCore = "2.18.3"
+junitJupiter = "5.13.0-M2"
 junitJupiterApi = "5.13.0-M2"
 kotlin = "2.0.0"
 coreKtx = "1.15.0"
@@ -42,6 +43,7 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junitJupiter" }
 junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junitJupiterApi" }
 leshan-client-cf = { module = "org.eclipse.leshan:leshan-client-cf", version.ref = "leshanClientCf" }
 leshan-client-core = { module = "org.eclipse.leshan:leshan-client-core", version.ref = "leshanClientCore" }
