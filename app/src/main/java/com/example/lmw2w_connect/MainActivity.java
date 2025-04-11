@@ -1,9 +1,14 @@
 package com.example.lmw2w_connect;
 
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import org.eclipse.californium.core.CoapClient;
+import org.eclipse.californium.core.CoapResponse;
+import org.eclipse.californium.elements.exception.ConnectorException;
 import org.eclipse.leshan.client.LeshanClient;
 import org.eclipse.leshan.client.LeshanClientBuilder;
 import org.eclipse.leshan.client.resource.ObjectsInitializer;
@@ -17,7 +22,6 @@ import org.eclipse.leshan.core.model.ObjectLoader;
 import org.eclipse.leshan.core.model.ObjectModel;
 import org.eclipse.leshan.core.model.StaticModel;
 import org.eclipse.leshan.core.request.BindingMode;
-//import org.eclipse.leshan.transport.californium.endpoint.CfClientEndpointsProvider;
 import org.eclipse.leshan.transport.javacoap.client.endpoint.JavaCoapClientEndpointsProvider;
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,39 +40,73 @@ public class MainActivity extends AppCompatActivity {
             try {
                 startLwm2mClient();
             } catch (InvalidModelException | InvalidDDFFileException | IOException e) {
-                e.printStackTrace(); // Remplacer par des log plus appropriés
+                Log.e("LwM2M", "Failed to start LwM2M client due to model or file error", e);
+            } catch (ConnectorException e) {
+                throw new RuntimeException("ConnectorException while starting LwM2M client", e);
             }
         }).start();
-
     }
 
-    private void startLwm2mClient() throws InvalidModelException, InvalidDDFFileException, IOException {
-        Log.d("LwM2M","Bienvenue sur le test LwM2M !");
+    private void startLwm2mClient() throws InvalidModelException, InvalidDDFFileException, IOException, ConnectorException {
         String endpoint = "RetD";
         LeshanClientBuilder builder = new LeshanClientBuilder(endpoint);
         BindingMode serverBindingMode = BindingMode.fromProtocol(Objects.requireNonNull(Protocol.fromUri("coap://leshan.eclipseprojects.io:5683")));
 
-        // Load model
-        InputStream model = getAssets().open("lwm2m_model.xml");
-        if (model == null) {
-            Log.e("DEBUG", "Fichier non trouvé !");
-        } else {
-            Log.d("DEBUG", "Fichier bien chargé !");
-        }
-        List<ObjectModel> models = new ArrayList<>(ObjectLoader.loadDdfFile(model, "lwm2m_model.xml"));
+        // Load LwM2M model files
+        List<ObjectModel> models = loadResources();
+        Log.d("LwM2M", "Object initialization completed. Number of models loaded: " + models.size());
 
-
-        // Initialisation des objets LwM2M
+        // Initialize LwM2M objects
         ObjectsInitializer initializer = new ObjectsInitializer(new StaticModel(models));
         initializer.setInstancesForObject(LwM2mId.SECURITY, Security.noSec("coap://leshan.eclipseprojects.io:5683", 12345));
         initializer.setInstancesForObject(LwM2mId.SERVER, new Server(12345, (5 * 60),
-                EnumSet.of(serverBindingMode),false, BindingMode.U));
+                EnumSet.of(serverBindingMode), false, BindingMode.U));
+        initializer.setInstancesForObject(LwM2mId.DEVICE, new MyDevice());
 
         builder.setObjects(initializer.createAll());
-        // Utiliser Californium au lieu de JavaCoAP
+
+        // Use Californium instead of JavaCoAP
         builder.setEndpointsProviders(List.of(new JavaCoapClientEndpointsProvider()));
         LeshanClient client = builder.build();
-        Log.d("LwM2M","Fin du test !");
+
+        // Test server connectivity
+        CoapClient connection = new CoapClient("coap://leshan.eclipseprojects.io:5683/");
+        CoapResponse response = connection.get();
+        if (response == null) {
+            Log.e("LwM2M", "No response from the server!");
+        }
+
         client.start();
     }
+
+    private List<ObjectModel> loadResources() {
+        String directory = "models_lwm2m/";
+        List<ObjectModel> models = new ArrayList<>();
+        AssetManager assetManager = getAssets();
+
+        try {
+            String[] files = assetManager.list(directory);
+            if (files != null) {
+                for (String filename : files) {
+                    if (filename.endsWith(".xml")) {
+                        try {
+                            InputStream is = assetManager.open(directory + filename);
+                            models.addAll(ObjectLoader.loadDdfFile(is, filename));
+                        } catch (IOException e) {
+                            Log.e("DEBUG", "File not found or I/O error: " + filename, e);
+                        } catch (Exception e) {
+                            Log.e("DEBUG", "Parsing error for file: " + filename, e);
+                        }
+                    }
+                }
+            } else {
+                Log.e("DEBUG", "Empty or missing directory: " + directory);
+            }
+        } catch (IOException e) {
+            Log.e("DEBUG", "Error accessing assets: ", e);
+        }
+
+        return models;
+    }
+
 }
