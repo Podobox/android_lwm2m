@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         initializer.setInstancesForObject(LwM2mId.SECURITY, Security.noSec("coap://leshan.eclipseprojects.io:5683", 12345));
         initializer.setInstancesForObject(LwM2mId.SERVER, new Server(12345, (5 * 60),
                 EnumSet.of(serverBindingMode), false, BindingMode.U));
-        initializer.setInstancesForObject(LwM2mId.DEVICE, new MyDevice());
+        initializer.setInstancesForObject(LwM2mId.DEVICE, new MyDevice(this));
 
         builder.setObjects(initializer.createAll());
 
@@ -83,9 +83,10 @@ public class MainActivity extends AppCompatActivity {
         String directory = "models_lwm2m/";
         List<ObjectModel> models = new ArrayList<>();
         AssetManager assetManager = getAssets();
-
-        try {
-            String[] files = assetManager.list(directory);
+        // Uncomment to load all files
+//        try {
+//            String[] files = assetManager.list(directory);
+        List<String> files = List.of("0.xml", "1.xml", "2.xml", "3.xml");
             if (files != null) {
                 for (String filename : files) {
                     if (filename.endsWith(".xml")) {
@@ -102,9 +103,9 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Log.e("DEBUG", "Empty or missing directory: " + directory);
             }
-        } catch (IOException e) {
-            Log.e("DEBUG", "Error accessing assets: ", e);
-        }
+//        } catch (IOException e) {
+//            Log.e("DEBUG", "Error accessing assets: ", e);
+//        }
 
         return models;
     }

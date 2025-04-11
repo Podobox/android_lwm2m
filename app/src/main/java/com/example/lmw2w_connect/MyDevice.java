@@ -1,5 +1,12 @@
 package com.example.lmw2w_connect;
 
+import static androidx.core.content.ContextCompat.registerReceiver;
+
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.BatteryManager;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -37,7 +44,20 @@ public class MyDevice extends BaseInstanceEnabler implements Destroyable {
 
     private final Timer timer;
 
+    private Context context = null;
+
     public MyDevice() {
+        // notify new date each 5 second
+        this.timer = new Timer("Device-Current Time");
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                fireResourceChange(13);
+            }
+        }, 5000, 5000);
+    }
+    public MyDevice(Context context) {
+        this.context = context;
         // notify new date each 5 second
         this.timer = new Timer("Device-Current Time");
         timer.schedule(new TimerTask() {
@@ -157,8 +177,20 @@ public class MyDevice extends BaseInstanceEnabler implements Destroyable {
     }
 
     protected int getBatteryLevel() {
-        return RANDOM.nextInt(101);
+        IntentFilter ifilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        Intent batteryStatus = context.registerReceiver(null, ifilter);
+
+        if (batteryStatus != null) {
+            int level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+            int scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+
+            if (level >= 0 && scale > 0) {
+                return (int) ((level / (float) scale) * 100);
+            }
+        }
+        return -1; // Return -1 if battery level could not be determined
     }
+
 
     protected long getMemoryFree() {
         return Runtime.getRuntime().freeMemory() / 1024;
