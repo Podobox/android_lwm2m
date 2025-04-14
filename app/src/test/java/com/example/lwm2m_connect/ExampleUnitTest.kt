@@ -1,4 +1,4 @@
-package com.example.lmw2w_connect
+package com.example.lwm2m_connect
 
 import org.junit.Test
 

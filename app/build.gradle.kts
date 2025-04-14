@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.lmw2w_connect"
+    namespace = "com.example.lwm2m_connect"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.lmw2w_connect"
+        applicationId = "com.example.lwm2m_connect"
         minSdk = 29
         targetSdk = 35
         versionCode = 1

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Lmw2w_connect" parent="Theme.AppCompat.Light" />
+    <style name="Theme.Lwm2m_connect" parent="Theme.AppCompat.Light" />
 </resources>

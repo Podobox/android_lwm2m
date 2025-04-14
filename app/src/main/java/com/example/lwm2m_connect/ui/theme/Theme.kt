@@ -1,6 +1,5 @@
-package com.example.lmw2w_connect.ui.theme
+package com.example.lwm2m_connect.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

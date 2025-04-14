@@ -1,9 +1,10 @@
-package com.example.lmw2w_connect;
+package com.example.lwm2m_connect;
 
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.eclipse.californium.core.CoapClient;
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @NonNull
     private List<ObjectModel> loadResources() {
         String directory = "models_lwm2m/";
         List<ObjectModel> models = new ArrayList<>();
@@ -117,5 +119,30 @@ public class MainActivity extends AppCompatActivity {
 
         return models;
     }
+
+    /*private void gatewayConnection() {
+        LwM2mClient client = new LwM2mClient("clientId", "coap://<gateway-ip>");  // Créez un client pour interagir avec le serveur Leshan
+        client.start();  // Démarrez le client
+
+// Créez une requête de lecture pour l'objet 3/0
+        ReadRequest readRequest = new ReadRequest("/Sensor_left/3/0");
+        client.send(readRequest, new ReadResponseHandler() {
+            @Override
+            public void onResponse(ReadResponse response) {
+                if (response.isSuccess()) {
+                    // Traitez la réponse contenant les informations de l'objet
+                    System.out.println("Response: " + response.getContent());
+                } else {
+                    System.err.println("Failed to read resource");
+                }
+            }
+
+            @Override
+            public void onError(Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+    }*/
 
 }
