@@ -1,7 +1,5 @@
 package com.example.lmw2w_connect;
 
-import static androidx.core.content.ContextCompat.registerReceiver;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
