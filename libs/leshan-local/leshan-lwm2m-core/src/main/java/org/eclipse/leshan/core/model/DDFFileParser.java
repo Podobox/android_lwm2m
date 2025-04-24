@@ -86,11 +86,6 @@ public class DDFFileParser {
     protected DocumentBuilderFactory createDocumentBuilderFactory() {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         /*try {
-            // Create Safe DocumentBuilderFactory (not vulnerable to XXE Attacks)
-            // -----------------------------------------------------------------
-            // There is several recommendation from different source we try to apply all, even if some are maybe
-            // redundant.
-
             // from :
             // https://semgrep.dev/docs/cheat-sheets/java-xxe/
             factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);

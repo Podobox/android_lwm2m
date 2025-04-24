@@ -8,15 +8,21 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.eclipse.californium.core.CoapClient;
+import org.eclipse.californium.core.CoapResource;
 import org.eclipse.californium.core.CoapResponse;
+import org.eclipse.californium.core.CoapServer;
 import org.eclipse.californium.elements.exception.ConnectorException;
 import org.eclipse.leshan.client.LeshanClient;
 import org.eclipse.leshan.client.LeshanClientBuilder;
+import org.eclipse.leshan.client.resource.BaseInstanceEnabler;
+import org.eclipse.leshan.client.resource.LwM2mObjectEnabler;
+import org.eclipse.leshan.client.resource.ObjectEnabler;
 import org.eclipse.leshan.client.resource.ObjectsInitializer;
 import org.eclipse.leshan.core.LwM2mId;
 import org.eclipse.leshan.core.endpoint.Protocol;
 import org.eclipse.leshan.client.object.Security;
 import org.eclipse.leshan.client.object.Server;
+import org.eclipse.leshan.core.link.Link;
 import org.eclipse.leshan.core.model.InvalidDDFFileException;
 import org.eclipse.leshan.core.model.InvalidModelException;
 import org.eclipse.leshan.core.model.ObjectLoader;
@@ -28,16 +34,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.EnumSet;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
+    Map<String, BaseInstanceEnabler> gatewayObjects = new HashMap<>();
     private static final String[] LOADED_FILES = {
-        "0.xml", "1.xml", "2.xml", "3.xml", "25.xml", "3303.xml"
+        "0.xml", "1.xml", "2.xml", "3.xml", "25.xml", "26.xml", "3303.xml"
     };
     private final String TAG = "LWM2M_APP";
-    private static final String URI = "coap://leshan.eclipseprojects.io:5683";
+//    private static final String URI = "coap://leshan.eclipseprojects.io:5683";
+    private static final String URI = "coap://192.168.106.225:5683";
     private static final int OBJECT_ID_LWM2M_LWM2M_GATEWAY = 25;
     private static final int OBJECT_ID_TEMPERATURE_SENSOR = 3303;
 
@@ -70,9 +80,19 @@ public class MainActivity extends AppCompatActivity {
         initializer.setInstancesForObject(LwM2mId.SECURITY, Security.noSec(URI, 12345));
         initializer.setInstancesForObject(LwM2mId.SERVER, new Server(12345, (5 * 60),
                 EnumSet.of(serverBindingMode), false, BindingMode.U));
-        initializer.setInstancesForObject(OBJECT_ID_TEMPERATURE_SENSOR, new RandomTemperatureSensor());
+//        initializer.setInstancesForObject(OBJECT_ID_TEMPERATURE_SENSOR, new RandomTemperatureSensor());
         initializer.setInstancesForObject(LwM2mId.DEVICE, new MyDevice(this));
-        initializer.setInstancesForObject(OBJECT_ID_LWM2M_LWM2M_GATEWAY, new Gateway());
+        initializer.setInstancesForObject(OBJECT_ID_LWM2M_LWM2M_GATEWAY, new Gateway("Desk",
+                "d01",
+                new Link[] {
+                    new Link("/3303/0"),
+            }),
+            new Gateway("Lobby",
+                "d02",
+                new Link[] {
+                    new Link("/3303/0"),
+                    new Link("/3303/1")
+        }));
 
         builder.setObjects(initializer.createAll());
 
@@ -88,6 +108,17 @@ public class MainActivity extends AppCompatActivity {
         }else {
             client.start();
             Log.d(TAG, "Connection successfully");
+            Log.d("DEBUG", "Connection successfully");
+
+            /*// Démarrage du serveur CoAP
+            CoapServer server = new CoapServer();
+            GatewayRouter router = new GatewayRouter("d02", gatewayObjects);
+
+            server.add(router);
+            server.start();
+
+
+            Log.d(TAG, "Serveur CoAP démarré sur la Gateway");*/
         }
     }
 
@@ -96,8 +127,6 @@ public class MainActivity extends AppCompatActivity {
         String directory = "models_lwm2m/";
         List<ObjectModel> models = new ArrayList<>();
         AssetManager assetManager = getAssets();
-        // Uncomment to load all files
-//        String[] files = assetManager.list(directory);
         String[] files = LOADED_FILES;
 
         if (files != null) {
@@ -119,30 +148,4 @@ public class MainActivity extends AppCompatActivity {
 
         return models;
     }
-
-    /*private void gatewayConnection() {
-        LwM2mClient client = new LwM2mClient("clientId", "coap://<gateway-ip>");  // Créez un client pour interagir avec le serveur Leshan
-        client.start();  // Démarrez le client
-
-// Créez une requête de lecture pour l'objet 3/0
-        ReadRequest readRequest = new ReadRequest("/Sensor_left/3/0");
-        client.send(readRequest, new ReadResponseHandler() {
-            @Override
-            public void onResponse(ReadResponse response) {
-                if (response.isSuccess()) {
-                    // Traitez la réponse contenant les informations de l'objet
-                    System.out.println("Response: " + response.getContent());
-                } else {
-                    System.err.println("Failed to read resource");
-                }
-            }
-
-            @Override
-            public void onError(Exception e) {
-                e.printStackTrace();
-            }
-        });
-
-    }*/
-
 }

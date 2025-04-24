@@ -10,23 +10,28 @@ import org.eclipse.leshan.core.response.ReadResponse;
 public class Gateway extends BaseInstanceEnabler {
 
     private final String deviceId;
-    private  String prefix;
-    private  Link[] iotDeviceObjects;
+    private final String prefix;
+    private Link[] iotDeviceObjects;
+
 
     public Gateway() {
         this.deviceId = "Centrale_1";
-        this.prefix = "/Sensor_left";
+        this.prefix = "sensor_desk";
         this.iotDeviceObjects = new Link[] {
                 new Link("/3/0"),   // Objet Device
                 new Link("/3/1"),   // Objet Device
                 new Link("/3303/0") // Objet Temperature Sensor
         };
     }
-    public Gateway(String deviceId, String prefix, Link[] iotDeviceObjects) {
+    public Gateway(String deviceId,String prefix, Link[] iotDevice) {
         this.deviceId = deviceId;
         this.prefix = prefix;
-        this.iotDeviceObjects = iotDeviceObjects;
+        this.iotDeviceObjects = iotDevice;
     }
+
+    /*public void registerVirtualObject(String prefix, BaseInstanceEnabler object) {
+        this.prefixToObject.put(prefix, object);
+    }*/
 
     @Override
     public ReadResponse read(LwM2mServer server, int resourceId) {
